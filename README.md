@@ -1,4 +1,4 @@
-# TotisGdB Docs
+# Totis® | Gestión de bienes - Documentación
 
 Repositorio público de documentación técnica para TotisGdB.
 

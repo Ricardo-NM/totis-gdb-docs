@@ -1,0 +1,40 @@
+site_name: TotisGdB Docs
+site_description: Documentacion tecnica publica de TotisGdB sin codigo fuente.
+site_author: TotisGdB
+
+theme:
+  name: material
+  language: es
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.suggest
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: teal
+
+nav:
+  - Inicio: index.md
+  - Arquitectura: arquitectura.md
+  - Tecnologias: tecnologias.md
+  - Modulos: modulos.md
+  - Flujos: flujos.md
+  - Seguridad: seguridad.md
+  - Metodologia: metodologia.md
+  - Privacidad: privacidad.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+plugins:
+  - search

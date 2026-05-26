@@ -1,5 +1,5 @@
-site_name: TotisGdB Docs
-site_description: Documentacion tecnica publica de TotisGdB sin codigo fuente.
+site_name: TotisGdB
+site_description: Documentación técnica pública de TotisGdB sin código fuente.
 site_author: TotisGdB
 
 theme:
@@ -12,17 +12,20 @@ theme:
     - search.suggest
   palette:
     - scheme: default
-      primary: indigo
-      accent: teal
+      primary: lime
+      accent: lime
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Inicio: index.md
   - Arquitectura: arquitectura.md
-  - Tecnologias: tecnologias.md
-  - Modulos: modulos.md
+  - Tecnologías: tecnologias.md
+  - Módulos: modulos.md
   - Flujos: flujos.md
   - Seguridad: seguridad.md
-  - Metodologia: metodologia.md
+  - Metodología: metodologia.md
   - Privacidad: privacidad.md
 
 markdown_extensions:

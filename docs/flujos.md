@@ -1,62 +1,62 @@
 # Flujos Principales
 
-Esta seccion resume los procesos principales cubiertos por TotisGdB. Los diagramas muestran el comportamiento general sin exponer reglas internas ni detalles sensibles.
+Esta sección resume los procesos principales cubiertos por TotisGdB. Los diagramas muestran el comportamiento general sin exponer reglas internas ni detalles sensibles.
 
-## Inicio de sesion
+## Inicio de sesión
 
 ```mermaid
 flowchart TD
-    A[Usuario ingresa credenciales] --> B[Validacion de identidad]
-    B --> C{Acceso valido}
-    C -->|Si| D[Creacion de sesion]
+    A[Usuario abre el sistema] --> B[Validación con Active Directory]
+    B --> C{Perfil corporativo válido}
+    C -->|Sí| D[Creación de sesión en la aplicación]
     C -->|No| E[Mensaje de acceso no autorizado]
-    D --> F[Redireccion a modulo segun perfil]
+    D --> F[Redirección a módulo según perfil]
 ```
 
-El sistema utiliza autenticacion por cookies y sesiones con expiracion. Cada perfil accede a funciones acordes con sus responsabilidades.
+El sistema utiliza Active Directory para validar automáticamente al usuario con las credenciales de su perfil corporativo en Windows. Después de esa validación, la aplicación mantiene su sesión web y aplica los permisos funcionales correspondientes.
 
-## Carga de activos desde hoja de calculo
+## Carga de activos desde hoja de cálculo
 
 ```mermaid
 flowchart TD
-    A[Usuario autorizado selecciona archivo] --> B[Validacion de estructura]
+    A[Usuario autorizado selecciona archivo] --> B[Validación de estructura]
     B --> C{Archivo aceptado}
-    C -->|Si| D[Procesamiento de registros]
-    C -->|No| E[Notificacion de errores]
-    D --> F[Actualizacion de informacion]
+    C -->|Sí| D[Procesamiento de registros]
+    C -->|No| E[Notificación de errores]
+    D --> F[Actualización de información]
     F --> G[Consulta o reporte]
 ```
 
-Este flujo permite alimentar informacion operativa de activos desde archivos tabulares, manteniendo validaciones previas antes de actualizar datos.
+Este flujo permite alimentar información operativa de activos desde archivos tabulares, manteniendo validaciones previas antes de actualizar datos.
 
-## Asignacion de activos
+## Asignación de activos
 
 ```mermaid
 flowchart TD
-    A[Seleccion de activos] --> B[Definicion de responsable]
-    B --> C[Solicitud de asignacion]
-    C --> D[Revision correspondiente]
-    D --> E{Decision}
-    E -->|Aprobada| F[Registro de asignacion]
-    E -->|Rechazada| G[Registro de observacion]
+    A[Selección de activos] --> B[Definición de responsable]
+    B --> C[Solicitud de asignación]
+    C --> D[Revisión correspondiente]
+    D --> E{Decisión}
+    E -->|Aprobada| F[Registro de asignación]
+    E -->|Rechazada| G[Registro de observación]
     F --> H[Documento responsivo]
 ```
 
-La asignacion vincula activos con responsables y puede generar documentos de respaldo para control administrativo.
+La asignación vincula activos con responsables y puede generar documentos de respaldo para control administrativo.
 
-## Traspaso, baja y devolucion
+## Traspaso, baja y devolución
 
 ```mermaid
 flowchart LR
-    A[Solicitud] --> B[Revision]
+    A[Solicitud] --> B[Revisión]
     B --> C{Resultado}
-    C -->|Aprobacion| D[Actualizacion de estatus]
-    C -->|Rechazo| E[Observacion registrada]
+    C -->|Aprobación| D[Actualización de estatus]
+    C -->|Rechazo| E[Observación registrada]
     D --> F[Historial de movimiento]
 ```
 
-Estos procesos comparten una estructura general: solicitud, revision, decision, actualizacion del estado del activo y registro en historial.
+Estos procesos comparten una estructura general: solicitud, revisión, decisión, actualización del estado del activo y registro en historial.
 
 ## Reportes y documentos
 
-Los reportes permiten consultar informacion filtrada y exportar resultados para seguimiento administrativo. Los documentos generados respaldan procesos como cartas responsivas y evidencias de movimiento.
+Los reportes permiten consultar información filtrada y exportar resultados para seguimiento administrativo. Los documentos generados respaldan procesos como cartas responsivas y evidencias de movimiento.

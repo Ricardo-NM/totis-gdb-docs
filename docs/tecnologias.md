@@ -1,38 +1,41 @@
-# Tecnologias
+# Tecnologías
 
-TotisGdB utiliza un conjunto de tecnologias orientadas a aplicaciones web empresariales, persistencia relacional y generacion de documentos administrativos.
+TotisGdB utiliza un conjunto de tecnologías orientadas a aplicaciones web empresariales, persistencia relacional, autenticación corporativa y generación de documentos administrativos.
 
 ## Plataforma
 
-- **.NET 8:** plataforma principal de ejecucion.
-- **ASP.NET Core MVC:** patron de aplicacion web basado en controladores, modelos y vistas.
-- **Entity Framework Core:** acceso a datos y administracion del modelo relacional.
-- **SQL Server:** motor relacional usado para almacenar informacion operativa del sistema.
+- **.NET 8:** Plataforma principal de ejecución.
+- **ASP.NET Core MVC:** Patrón de aplicación web basado en controladores, modelos y vistas.
+- **Entity Framework Core:** Acceso a datos y administración del modelo relacional.
+- **SQL Server:** Motor relacional usado para almacenar información operativa del sistema.
+- **Active Directory:** Integración con perfiles corporativos para validar el acceso con las mismas credenciales del usuario en el entorno Windows.
+- **IIS sobre Windows Server:** Hospedaje de la aplicación en producción mediante Internet Information Services.
 
 ## Interfaz web
 
-- **Bootstrap:** estilos base, estructura visual y componentes responsivos.
-- **jQuery:** apoyo para interacciones en cliente.
-- **jQuery Validation:** validacion de formularios en interfaz.
-- **jQuery Validation Unobtrusive:** integracion de reglas de validacion con vistas MVC.
+- **Bootstrap:** Estilos base, estructura visual y componentes responsivos.
+- **jQuery:** Apoyo para interacciones en cliente.
+- **jQuery Validation:** Validación de formularios en interfaz.
+- **jQuery Validation Unobtrusive:** Integración de reglas de validación con vistas MVC.
 
 ## Documentos, reportes y archivos
 
-- **DinkToPdf:** soporte para conversion de contenido a PDF.
-- **QuestPDF:** generacion programatica de documentos PDF.
-- **DocumentFormat.OpenXml:** manipulacion de documentos de oficina.
-- **DocX:** creacion y edicion de documentos Word.
-- **NPOI:** lectura y escritura de archivos de hoja de calculo.
-- **X.PagedList.Mvc.Core:** paginacion de listados en vistas MVC.
-- **Newtonsoft.Json:** serializacion y manejo de estructuras JSON dentro de la aplicacion.
+- **DinkToPdf:** Soporte para conversión de contenido a PDF.
+- **QuestPDF:** Generación programática de documentos PDF.
+- **DocumentFormat.OpenXml:** Manipulación de documentos de oficina.
+- **DocX:** Creación y edición de documentos Word.
+- **NPOI:** Lectura y escritura de archivos de hoja de cálculo.
+- **X.PagedList.Mvc.Core:** Paginación de listados en vistas MVC.
+- **Newtonsoft.Json:** Serialización y manejo de estructuras JSON dentro de la aplicación.
 
 ## Seguridad de plataforma
 
-- Autenticacion basada en cookies.
-- Sesiones de usuario con expiracion.
+- Inicio de sesión integrado con Active Directory.
+- Autenticación basada en cookies.
+- Sesiones de usuario con expiración.
 - Acceso diferenciado por perfil funcional.
 - Uso de HTTPS en ambientes no locales.
 
-## Principio de documentacion publica
+## Principio de documentación pública
 
-Las tecnologias se documentan por su proposito dentro del sistema, no por configuraciones privadas ni implementaciones especificas.
+Las tecnologías se documentan por su propósito dentro del sistema, no por configuraciones privadas ni implementaciones específicas.
